@@ -5,14 +5,11 @@
   <button @click.prevent="open('greeting')">Basic demo</button>
   <button @click.prevent="open('alert')">Alert demo</button>
 
-  <AppModalGroup 
-    ref="modalGroup" 
-    v-slot="{ registerModal, closeModal }"
-  >
-    <AppModal 
-      :ref="registerModal('alert')" 
+  <AppModalGroup ref="modalGroup" v-slot="{ registerModal, closeModal }">
+    <AppModal
+      :ref="registerModal('alert')"
       target="#modal"
-      title="Alert!" 
+      title="Alert!"
       type="alert"
     >
       Content of Alert dialog

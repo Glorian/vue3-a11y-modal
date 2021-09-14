@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "main": "dist/vue-modal-dialog.js",
-  "private": "false",
+  "private": false,
   "files": [
     "dist"
   ],
