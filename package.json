@@ -1,16 +1,20 @@
 {
-  "name": "@slt/modal",
+  "name": "@glorian/vue3-a11y-modal",
   "version": "0.0.2",
   "author": {
     "email": "rjab4ik@gmail.com",
     "name": "Igor Biletskiy",
     "url": "https://github.com/Glorian"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Glorian/vue3-a11y-modal"
+  },
   "license": "MIT",
   "main": "dist/vue-modal-dialog.js",
   "private": "false",
   "files": [
-    "dist/vue-modal-dialog.js"
+    "dist"
   ],
   "keywords": [
     "modal",

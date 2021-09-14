@@ -5,8 +5,16 @@
   <button @click.prevent="open('greeting')">Basic demo</button>
   <button @click.prevent="open('alert')">Alert demo</button>
 
-  <AppModalGroup ref="modalGroup" v-slot="{ registerModal, closeModal }">
-    <AppModal :ref="registerModal('alert')" title="Alert!" type="alert">
+  <AppModalGroup 
+    ref="modalGroup" 
+    v-slot="{ registerModal, closeModal }"
+  >
+    <AppModal 
+      :ref="registerModal('alert')" 
+      target="#modal"
+      title="Alert!" 
+      type="alert"
+    >
       Content of Alert dialog
       <hr />
       <button @click="closeModal('alert', 'Alert Closed!')">Close</button>
@@ -18,7 +26,7 @@
       title="Greeting dialog"
     >
       <div>
-        Some content will be here
+        Regular content
         <hr />
         <button @click.prevent="open('alert')">Open Alert</button>
         <hr />
@@ -37,6 +45,7 @@ const modalGroup = ref(null);
 
 async function open(name) {
   const result = await modalGroup.value.openModal(name);
+
   console.log(`After close ${name} modal ==> ${result}`);
 }
 </script>
